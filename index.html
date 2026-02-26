@@ -1,1 +1,174 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Berlin Rooftop Café</title>\n    <link rel="stylesheet" href="styles.css">\n</head>\n<body>\n    <header>\n        <h1>Welcome to the Berlin Rooftop Café</h1>\n    </header>\n    <main>\n        <section>\n            <h2>About Us</h2>\n            <p>Join us for a relaxing atmosphere, delicious coffee, and stunning rooftop views of Berlin.</p>\n        </section>\n        <section>\n            <h2>Menu</h2>\n            <ul>\n                <li>Coffee</li>\n                <li>Tea</li>\n                <li>Pastries</li>\n            </ul>\n        </section>\n        <section>\n            <h2>Contact Us</h2>\n            <p>Email: info@berlinroofcaf.com</p>\n        </section>\n    </main>\n    <footer>\n        <p>&copy; 2026 Berlin Rooftop Café. All rights reserved.</p>\n    </footer>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berlin | Rooftop Café</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0f0f0f;
+      --bg-card: #1c1c1c;
+      --accent: #f5c16c;
+      --text-soft: #e6e6e6;
+      --muted: #9a9a9a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-soft);
+      line-height: 1.7;
+    }
+
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=1200&h=800&fit=crop') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      letter-spacing: 6px;
+      color: var(--accent);
+    }
+
+    header p {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #ddd;
+    }
+
+    section { padding: 5rem 8%; }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      margin-bottom: 2rem;
+      color: var(--accent);
+    }
+
+    .about {
+      background: var(--bg-card);
+      border-left: 5px solid var(--accent);
+    }
+
+    .about p { max-width: 900px; }
+
+    /* MENU */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .menu-item {
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-item:hover { transform: translateY(-6px); }
+
+    .menu-item h3 { color: var(--accent); margin-bottom: 0.5rem; }
+    .menu-item span { color: var(--muted); font-size: 0.95rem; }
+
+    /* GALLERY */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 18px;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-grid img:hover { transform: scale(1.04); }
+
+    /* CONTACT */
+    .contact {
+      background: var(--bg-card);
+      text-align: center;
+    }
+
+    footer {
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      background: #000;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>BERLIN</h1>
+    <p>Rooftop Café • Night Ambience • Urban Calm</p>
+  </div>
+</header>
+
+<section class="about">
+  <h2>About Berlin</h2>
+  <p>
+    Berlin is a premium rooftop café crafted for evenings that linger. Inspired by European
+    design, warm lights, stone textures and open skies, Berlin is where conversations, food
+    and city views come together.
+  </p>
+</section>
+
+<section class="menu">
+  <h2>Menu Highlights</h2>
+  <div class="menu-grid">
+    <div class="menu-item"><h3>Classic Cappuccino</h3><span>₹180</span></div>
+    <div class="menu-item"><h3>Cold Brew Coffee</h3><span>₹220</span></div>
+    <div class="menu-item"><h3>Cheese Garlic Bread</h3><span>₹260</span></div>
+    <div class="menu-item"><h3>Veg Bruschetta</h3><span>₹240</span></div>
+    <div class="menu-item"><h3>Paneer Tikka Sliders</h3><span>₹320</span></div>
+    <div class="menu-item"><h3>Belgian Chocolate Dessert</h3><span>₹290</span></div>
+    <div class="menu-item"><h3>Signature Mocktail</h3><span>₹260</span></div>
+    <div class="menu-item"><h3>Tiramisu</h3><span>₹310</span></div>
+  </div>
+</section>
+
+<section class="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=600&h=400&fit=crop" alt="Berlin Rooftop Seating">
+    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&h=400&fit=crop" alt="Berlin Night Ambience">
+    <img src="https://images.unsplash.com/photo-1495474472645-4c71bcdd2e18?w=600&h=400&fit=crop" alt="Berlin Cafe View">
+    <img src="https://images.unsplash.com/photo-1557804506-669714d2e9d8?w=600&h=400&fit=crop" alt="Berlin Outdoor Tables">
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Visit Berlin</h2>
+  <p>📍 Rooftop Café, City Center</p>
+  <p>🕒 5:00 PM – 12:00 AM</p>
+  <p>📞 +91 XXXXXXXXXX</p>
+  <p>📸 Instagram: @berlin.cafe</p>
+</section>
+
+<footer>
+  © 2026 Berlin Café. Designed for elevated evenings.
+</footer>
+
+</body>
+</html>
